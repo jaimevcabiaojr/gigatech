@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gigatech</title>
+</head>
+<body>
+ 
+ 
+    <h1 id="cal"></h1> 
+   
+    <button onclick="addCals()">add elf</button>
+    
+
+    <script>
+const elfTotalCals = [$sum]
+let highesCal = elfTotalCals[0];
+
+for(let i = 1; i < elfTotalCals.length; i++){
+
+  if (elfTotalCals[i] > highesCal){
+    highesCal = elfTotalCals[i];
+  }
+}
+
+console.log(highesCal);
+
+
+function addCals(){
+  const firstcal = prompt("enter first elf calories intake:" );
+  const secondcal = prompt("enter second elf calories intake:" );
+  const thirdcal = prompt("enter third elf calories intake:" );
+
+  const fcal = parseInt(firstcal);
+  const scal = parseInt(secondcal);
+  const tcal = parseInt(thirdcal);
+   
+  const sum = fcal + scal + tcal ;
+
+  console.log (`$(sum)` )
+  document.getElementById("cal").innerHTML= "first elf  " + sum;
+
+}
+ 
+addCals();
+
+
+    </script>
+  
+
+
+
+  
+</body>
+</html>
